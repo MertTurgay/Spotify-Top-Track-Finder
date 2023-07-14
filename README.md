@@ -24,10 +24,25 @@ Music charts. Every track have a preview so that the user can listen a sample of
 For this application you must run the Django backend first. For that you must have These Libraries
 
 * Python Dotenv
+```
+pip install python-dotenv
+```
 * Requests
+```
+pip install requests
+```
 * Django Rest Framework
+```
+pip install djangorestframework
+```
 * Django Serializers
+```
+pip install django-serializers
+```
 * Django Cors Headers
+```
+pip install django-cors-headers
+```
 
 An then when you run the server by
 
