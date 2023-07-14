@@ -36,16 +36,17 @@ export default {
   },
   methods: {
     searchTopTracks() {
-    axios.get(`http://127.0.0.1:8000/api/v1/tracks/${encodeURIComponent(this.genre)}/`)
-      .then(response => {
-        const tracks = response.data;
-        console.log('Track List:', tracks);
-        this.tracks = response.data;
+        this.genre = this.genre.toLowerCase();
         
-      })
-      .catch(error => {
-        console.error(error);
-      });
+        axios.get(`http://127.0.0.1:8000/api/v1/tracks/${encodeURIComponent(this.genre)}/`)
+          .then(response => {
+            //const tracks = response.data;
+            //console.log('Track List:', tracks);
+            this.tracks = response.data;
+          })
+          .catch(error => {
+            console.error(error);
+          });
     },
   },
 };
